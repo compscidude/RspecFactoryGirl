@@ -31,7 +31,7 @@ Include the following line in rails_helper.rb
 config.include FactoryGirl::Syntax::Methods
 ```
 
-## Factory Girl
+### Factory Girl
 
 spec/factories/users.rb
 ```ruby
