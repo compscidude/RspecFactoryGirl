@@ -99,7 +99,7 @@ Quick addition of user category "mid twenties", and "late twenties"
   random = create(:user, :random)
 ```
 ### Sequence
-The addition of interator which can be used to distinguish your models apart.
+Sequence is just an iterator which can be used when creating your models.
 
 ```ruby
   sequence :id do |n|
