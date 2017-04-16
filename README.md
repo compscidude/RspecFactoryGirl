@@ -170,7 +170,6 @@ end
    expect(user.portfolios.length).to === 3  
 ```
 
-
-
+## Testing API Endpoints with Rspec
 
 
