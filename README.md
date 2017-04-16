@@ -18,4 +18,13 @@ Include the following line in rails_helper.rb
 ```ruby
 config.include FactoryGirl::Syntax::Methods
 ```
+## Guidelines
+
+1. Factory Girl 
+  - Models
+  - Traits
+  - Sequence
+  - Callbacks
+1. Test API end-points with Rspec (Controllers)
+2. Test Models
 
