@@ -173,7 +173,7 @@ end
 ## Testing API Endpoints with Rspec
 
 Endpoints are tested inside the *modelname_controller_spec.rb
-The following endpoints should be tested
+
    1. #Index
    2. #Show
    3. #Create
@@ -190,4 +190,23 @@ The following endpoints should be tested
     patch :update, params: { id: user.id, user: { age: "23" } }
     delete :destroy, params: { id: user.id } 
 ```
-
+### Techniques for testing if endpoints are valid
+```ruby
+   # code is the returned http status in the returned header (200: success, 400: bad request, 422: unprocessible entity)
+   expect(response.status).to eq(code) 
+   
+   # expect{blockcode}.to change(..).by(count)
+   expect{ post :create, user: valid_attributes}.to change(User, :count).by(1)
+   
+   data = JSON.parse(response.body)
+   expect(data[0]["name"]).to eq("Kevin")
+   
+   # After creating 10 users
+   expect(data.length).to eq(10)
+   
+   # If you are expecting an error
+   expect(response.status).to eq(422)
+   
+   # Deleting a record
+   expect{action}.to change(User, :count).by(-1
+```
