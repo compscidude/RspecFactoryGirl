@@ -21,10 +21,10 @@ config.include FactoryGirl::Syntax::Methods
 ## Guidelines
 
 1. Factory Girl 
-        1. Models
-        2. Traits
-        3. Sequence
-        4. Callbacks
-3. Test API end-points with Rspec (Controllers)
-4. Test Models
+    1. Models
+    2. Traits
+    3. Sequence
+    4. Callbacks
+2. Test API end-points with Rspec (Controllers)
+3. Test Models
 
