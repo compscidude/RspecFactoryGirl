@@ -11,7 +11,7 @@
     * Sequence
     * Callbacks
     * Transient
-3. Test API end-points with Rspec (Controllers)
+3. Test API end-points with Rspec 
 
 
 ## 1. Installation
