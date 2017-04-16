@@ -172,4 +172,22 @@ end
 
 ## Testing API Endpoints with Rspec
 
+Endpoints are tested inside the *modelname_controller_spec.rb
+The following endpoints should be tested
+   1. #Index
+   2. #Show
+   3. #Create
+   4. #Update
+   5. #Delete
+
+### Accessing end points
+```ruby
+    before { create(:user) }
+    
+    get :index
+    get :show, params: { id: user.id }  
+    post :create, user: { name: "Kevin", age: "26" }
+    patch :update, params: { id: user.id, user: { age: "23" } }
+    delete :destroy, params: { id: user.id } 
+```
 
