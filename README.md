@@ -84,9 +84,7 @@ FactoryGirl.define do
         email Faker::Internet.email
         height rand(160..190)
      end
-     
   end
-  
 end
 ```
 Quick addition of user category "mid twenties", and "late twenties"
