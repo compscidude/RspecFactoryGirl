@@ -78,12 +78,12 @@ FactoryGirl.define do
         age rand(27..29)
      end
      
-     trait :random_user do
+     trait :random do
         name Faker::Name.name
         age rand(20..50)
         email Faker::Internet.email
         height rand(160..190)
-	  end
+     end
      
   end
   
