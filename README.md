@@ -25,6 +25,6 @@ config.include FactoryGirl::Syntax::Methods
         2. Traits
         3. Sequence
         4. Callbacks
-1. Test API end-points with Rspec (Controllers)
-2. Test Models
+3. Test API end-points with Rspec (Controllers)
+4. Test Models
 
