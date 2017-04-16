@@ -53,7 +53,7 @@ user2 = create(:user, name: "John Doe", age: 30)
 user3 = create(:user, name: "Larry King", age: 23)
 ```
 
-#### Traits
+### *Traits
 Traits are grouping of attributes applied to your factory model in the creation phase.
 
 ```ruby
