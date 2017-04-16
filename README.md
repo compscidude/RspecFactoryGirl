@@ -88,7 +88,8 @@ FactoryGirl.define do
   end
 end
 ```
-Quick addition of user category "mid twenties", and "late twenties"
+We can now use traits using the syntax below. Note that they are not limited to just one, but the latest one will override if there 
+is a duplicate attribute.
 
 ```ruby
   user = create(:user, :mid_twenties)
