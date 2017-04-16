@@ -141,13 +141,33 @@ There are four types of callbacks
 Assuming that model relations are set up correctly using ActiveRecord, the following should hold.
 ```ruby
    user = create(:user)
-   expect(user.portfolio.length).to === 1
+   expect(user.portfolios.length).to === 1
 ```
 
 ### Transient
 Transients are variables that are not read in by the factory model, but instead can be used to generate dynamic models if used correctly.
-```ruby
+Let's combine everything we've learned so far.
 
+```ruby
+factory :user do
+  ...
+  ...
+  # Child of user :: inheritance is applied
+  factory :user_with_3_portfolios do   
+          transient do
+            portfolio_count 3
+          end
+          after(:create) do |user, evaluator|
+            create_list(:user, evaluator.portfolio_count, user: user)
+          end
+   end
+end
+```
+
+```ruby
+   user = user.create(:user_with_3_portfolios)
+   # the following should hold true
+   expect(user.portfolios.length).to === 3  
 ```
 
 
