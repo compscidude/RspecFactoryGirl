@@ -28,3 +28,4 @@ config.include FactoryGirl::Syntax::Methods
 2. Test API end-points with Rspec (Controllers)
 3. Test Models
 
+### Factory Girl
