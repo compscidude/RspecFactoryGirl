@@ -28,4 +28,21 @@ config.include FactoryGirl::Syntax::Methods
 2. Test API end-points with Rspec (Controllers)
 3. Test Models
 
-### Factory Girl
+## Factory Girl
+
+spec/factories/users.rb
+```ruby
+FactoryGirl.define do
+  factory :user do
+    name "Michael"
+    age 40
+    email "Kevin@gmail.com"
+    height 185
+  end
+end
+```
+Create factory user in *_spec.rb
+```ruby
+user = create(:user)
+
+``
