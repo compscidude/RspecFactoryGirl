@@ -101,18 +101,18 @@ Sequence is just an iterator which can be used when creating your models.
 
 ```ruby
   sequence :id do |n|
-    "android-#{n}"
+    "#{n}"
   end
 
    generate :id
-   #=> android-1
+   #=> 1
 
    generate :id
-   #=> android-2
+   #=> 2
 
    # This would generate users with different id for each creation
    factory :user do 
-     sequence(:id) { |n| "user#{n}" }
+     sequence(:id) { |n| "#{n}" }
    end 
 ```
 Each user created using create_list would be assigned a different id because of sequence used to define the id.
