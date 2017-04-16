@@ -12,7 +12,6 @@
     * Callbacks
     * Transient
 3. Test API end-points with Rspec (Controllers)
-4. Test Models
 
 
 ## 1. Installation
