@@ -141,7 +141,7 @@ Assuming that model relations are set up correctly using ActiveRecord, the follo
 ```ruby
    user = create(:user)
    user.portfolio.length.should == 1
-``
+```
 
 ### Transient
 Transients are variables that are not read in by the factory model, but instead can be used to generate dynamic models if used correctly.
