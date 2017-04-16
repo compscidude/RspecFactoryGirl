@@ -14,7 +14,7 @@
 4. Test Models
 
 
-### 1. Installation
+## 1. Installation
 
 Include the following lines in your gemfile
 ```ruby
@@ -31,7 +31,7 @@ Include the following line in rails_helper.rb
 config.include FactoryGirl::Syntax::Methods
 ```
 
-### 2. Factory Girl
+## 2. Factory Girl
 
 spec/factories/users.rb
 ```ruby
