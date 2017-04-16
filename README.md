@@ -2,6 +2,18 @@
 
 ### Setup & Testing Rails Application with Rspec and Factory Girl
 
+## Guidelines
+
+1. Installation
+2. Factory Girl 
+    * Models
+    * Traits
+    * Sequence
+    * Callbacks
+3. Test API end-points with Rspec (Controllers)
+4. Test Models
+
+
 ### Installing
 
 Include the following lines in your gemfile
@@ -18,15 +30,6 @@ Include the following line in rails_helper.rb
 ```ruby
 config.include FactoryGirl::Syntax::Methods
 ```
-## Guidelines
-
-1. Factory Girl 
-    * Models
-    * Traits
-    * Sequence
-    * Callbacks
-2. Test API end-points with Rspec (Controllers)
-3. Test Models
 
 ## Factory Girl
 
@@ -44,5 +47,4 @@ end
 Create factory user in *_spec.rb
 ```ruby
 user = create(:user)
-
-``
+```
