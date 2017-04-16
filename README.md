@@ -10,6 +10,7 @@
     * Traits
     * Sequence
     * Callbacks
+    * Transient
 3. Test API end-points with Rspec (Controllers)
 4. Test Models
 
@@ -96,6 +97,7 @@ Quick addition of user category "mid twenties", and "late twenties"
   # user with random attributes
   random = create(:user, :random)
 ```
+
 ### Sequence
 Sequence is just an iterator which can be used when creating your models.
 
@@ -121,7 +123,31 @@ Each user created using create_list would be assigned a different id because of 
    users = create_list(:user, 10)
 ```
 
+### Callbacks
+There are four types of callbacks
+   1. after(:build)
+   2. before(:create)
+   3. after(:create)
+   4. after(:stub) 
+   
+```ruby
+   factory :user do
+     # we can chain it with the creation of something else that is associated with the user
+     # eg, if users are automatically assigned a portfolio with the user_id
+     after(:create) { |user| create(:portfolio, user: user) }
+   end
+```
+Assuming that model relations are set up correctly using ActiveRecord, the following should hold.
+```ruby
+   user = create(:user)
+   user.portfolio.length.should == 1
+``
 
+### Transient
+Transients are variables that are not read in by the factory model, but instead can be used to generate dynamic models if used correctly.
+```ruby
+
+```
 
 
 
