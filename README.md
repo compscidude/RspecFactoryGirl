@@ -11,7 +11,7 @@
     * Sequence
     * Callbacks
     * Transient
-3. Test API end-points with Rspec 
+3. Test API end points with Rspec 
 
 
 ## 1. Installation
@@ -189,7 +189,7 @@ Endpoints are tested inside the *modelname_controller_spec.rb
     patch :update, params: { id: user.id, user: { age: "23" } }
     delete :destroy, params: { id: user.id } 
 ```
-### Techniques for testing if endpoints are valid
+### Techniques for testing if end points are valid
 ```ruby
    # code is the returned http status in the returned header (200: success, 400: bad request, 422: unprocessible entity)
    expect(response.status).to eq(code) 
