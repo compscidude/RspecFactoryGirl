@@ -66,7 +66,7 @@ FactoryGirl.define do
   end
   
   trait :early_twenties
-    age rand(20..23)
+     age rand(20..23)
   end
   
   trait :mid_twenties
@@ -81,8 +81,8 @@ end
 ```
 
 ```ruby
-   user = create(:user, :mid_twenties)
-   user2 = create(:user, :late_twenties)
+  user = create(:user, :mid_twenties)
+  user2 = create(:user, :late_twenties)
 ```
 
 
