@@ -158,7 +158,7 @@ factory :user do
             portfolio_count 3
           end
           after(:create) do |user, evaluator|
-            create_list(:user, evaluator.portfolio_count, user: user)
+            create_list(:portfolio, evaluator.portfolio_count, user: user)
           end
    end
 end
