@@ -208,5 +208,5 @@ Endpoints are tested inside the *modelname_controller_spec.rb
    expect(response.status).to eq(422)
    
    # Deleting a record
-   expect{action}.to change(User, :count).by(-1
+   expect{action}.to change(User, :count).by(-1)
 ```
