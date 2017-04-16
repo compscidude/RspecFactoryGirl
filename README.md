@@ -115,7 +115,7 @@ Sequence is just an iterator which can be used when creating your models.
      sequence(:id) { |n| "user#{n}" }
    end 
 ```
-Each user created using create_list would be assigned a different id 
+Each user created using create_list would be assigned a different id because of sequence used to define the id.
 ```ruby
    # create_list allows us to create multiple instances of the model
    users = create_list(:user, 10)
