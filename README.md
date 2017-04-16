@@ -37,8 +37,8 @@ spec/factories/users.rb
 ```ruby
 FactoryGirl.define do
   factory :user do
-    name "Michael"
-    age 40
+    name "Michael Pearson"
+    age 20
     email "Kevin@gmail.com"
     height 185
   end
@@ -47,4 +47,8 @@ end
 Create factory user in *_spec.rb
 ```ruby
 user = create(:user)
+
+# or you can pass in attributes to override 
+user2 = create(:user, name: "John Doe", age: 30)
+user3 = create(:user, name: "Larry King" age: 23)
 ```
