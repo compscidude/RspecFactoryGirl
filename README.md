@@ -110,14 +110,15 @@ Sequence is just an iterator which can be used when creating your models.
    generate :id
    #=> android-2
 
-  # This would generate users with different id for each creation
-  factory :user do 
-    sequence(:id) { |n| "user#{n}" }
-  end 
-
-  #eg, each user created using create_list would be assigned a different id 
-  users = create_list(:user, 10)
- 
+   # This would generate users with different id for each creation
+   factory :user do 
+     sequence(:id) { |n| "user#{n}" }
+   end 
+```
+Each user created using create_list would be assigned a different id 
+```ruby
+   # create_list allows us to create multiple instances of the model
+   users = create_list(:user, 10)
 ```
 
 
