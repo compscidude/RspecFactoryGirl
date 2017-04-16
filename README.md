@@ -66,15 +66,15 @@ FactoryGirl.define do
     points 0
     
   
-     trait :early_twenties
+     trait :early_twenties do
         age rand(20..23)
      end
 
-     trait :mid_twenties
+     trait :mid_twenties do
         age rand(24..26)
      end
 
-     trait :late_twenties
+     trait :late_twenties do
         age rand(27..29)
      end
      
@@ -98,6 +98,31 @@ Quick addition of user category "mid twenties", and "late twenties"
   # user with random attributes
   random = create(:user, :random)
 ```
+### Sequence
+The addition of interator which can be used to distinguish your models apart.
+
+```ruby
+  sequence :id do |n|
+    "android-#{n}"
+  end
+
+   generate :id
+   #=> android-1
+
+   generate :id
+   #=> android-2
+
+  # This would generate users with different id for each creation
+  factory :user do 
+    sequence(:id) { |n| "user#{n}" }
+  end 
+
+  #eg, each user created using create_list would be assigned a different id 
+  users = create_list(:user, 10)
+ 
+```
+
+
 
 
 
