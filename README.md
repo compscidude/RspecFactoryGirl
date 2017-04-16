@@ -140,7 +140,7 @@ There are four types of callbacks
 Assuming that model relations are set up correctly using ActiveRecord, the following should hold.
 ```ruby
    user = create(:user)
-   user.portfolio.length.should == 1
+   expect(user.portfolio.length).to === 1
 ```
 
 ### Transient
